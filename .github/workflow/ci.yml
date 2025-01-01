@@ -1,0 +1,26 @@
+name: class party
+on:
+  push:
+    branches:
+      - develop
+jobs:
+  build_job:
+    runs_on: ubuntu-latest
+    steps:
+      - name: welcome class
+      - run: "welcome to the GH actios"
+      - name: checkout repository
+      - uses: actions/checkout@v4
+      - name: git repository information
+      - run:
+        echo "repository name: ${{github.repository}}"
+        echo "repository owner:  ${{github.repository_owner}}"
+        echo "event name: ${{github.event.name}}"
+        git branch
+        git branch -a
+        git log
+
+
+
+
+
